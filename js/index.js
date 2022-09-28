@@ -1,12 +1,11 @@
 
-function deez(){
-    let deezText = document.getElementById("p1");
-    if(deezText.innerHTML = "Off"){
-        deezText.innerHTML = "On";
+function toggleText(){
+    var text = document.getElementById("toggleButton");
+    if (text.innerHTML === "Off") {
+        text.innerHTML = "On";
+    } else {
+        text.innerHTML = "Off";
     }
-    else {
-        deezText.innerHTML = "Off";
-    };
 };
 
 function getName(){
@@ -24,9 +23,12 @@ function getAddAnswer(){
     let firstNumber = Number(document.getElementById("first").value);
     let secondNumber = Number(document.getElementById("second").value);
     let sumText = document.getElementById("additionSum");
-    let sum = firstNumber + secondNumber;
-
-    sumText.innerHTML = "The answer is: " + sum;
+    if (firstNumber, secondNumber == ""){
+        sumText.innerHTML = "Please enter 2 numbers!";
+    } else {
+        let sum = firstNumber + secondNumber;
+        sumText.innerHTML = "The answer is: " + sum; 
+    }
 };
 
 let count = 0;
